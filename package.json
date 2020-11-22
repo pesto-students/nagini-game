@@ -1,0 +1,19 @@
+{
+  "name": "nagini",
+  "version": "1.0.0",
+  "description": "Backend APIs and Client for Nagini Multiplayer Snakegame",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/team-5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/team-5/issues"
+  },
+  "homepage": "https://github.com/pesto-students/team-5#readme"
+}
