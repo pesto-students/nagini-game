@@ -16,10 +16,10 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: cd server && npm install
-     - name: "Create .netrc for Heroku Auth"
-        uses: akhileshns/heroku-deploy@v3.5.7 
-        with: 
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}} 
-          heroku_app_name: "api-nagini" 
-          heroku_email: "imrans110@hotmail.com" 
-          path: ./server
+      - name: "Create .netrc for Heroku Auth"
+        uses: akhileshns/heroku-deploy@v3.5.7 # This is the action we are importing
+        with: # It accepts some arguments to work, we can pass the argument using `with`
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}} # This is the same as the auth key we generated earlier
+          heroku_app_name: "api-nagini" #Must be unique in Heroku
+          heroku_email: "imrans110@hotmail.com" # Email attached to the account
+          appdir: "server"
