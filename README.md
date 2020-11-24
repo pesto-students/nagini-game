@@ -1,1 +1,7 @@
-# team-5
+# Nagini - A Snake Game
+
+# Project Stack
+
+- Node
+- React
+- MongoDB
