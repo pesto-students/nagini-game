@@ -16,10 +16,10 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: cd server && npm install
-      - name: Build
-        run: cd server && npm run build
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: server-build
-          path: ./server/build
+     - name: "Create .netrc for Heroku Auth"
+        uses: akhileshns/heroku-deploy@v3.5.7 
+        with: 
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}} 
+          heroku_app_name: "api-nagini" 
+          heroku_email: "imrans110@hotmail.com" 
+          path: ./server
