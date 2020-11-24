@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon --exec babel-node src/app.js",
     "start:prod": "pm2 start build/app.js",
-    "start:npx": "npx babel-node src/app.js",
     "build": "babel src --out-dir build --copy-files"
   },
   "author": "",
@@ -19,7 +18,6 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "npx": "^10.2.2",
     "pm2": "^4.5.0"
   }
 }
