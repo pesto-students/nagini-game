@@ -2,8 +2,10 @@ import express from "express";
 
 const app = express();
 
-app.listen({ port: 4000 }, () => {
-  console.log("Server listening on port 9999");
+const PORT = 4000;
+
+app.listen({ port: PORT }, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
 
 app.get("/", (req, res) => {
