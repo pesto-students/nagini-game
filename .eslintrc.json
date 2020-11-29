@@ -4,6 +4,7 @@
     "es2021": true,
     "node": true
   },
+  "ignorePatterns": ["server/build/*", "webclient/build/*"],
   "extends": [
     "plugin:react/recommended",
     "airbnb",
