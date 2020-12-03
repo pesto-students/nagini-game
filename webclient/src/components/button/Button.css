@@ -1,0 +1,27 @@
+.App-Button{
+
+}
+
+.App-Button button{
+  outline:none;
+  border:none;
+  background-color: transparent;
+  font-family: harry_p, sans-serif;
+  color:#470F14;
+  font-size: 30px;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  border:2px solid #470F14;
+  box-shadow: 0px 0px 5px black;
+}
+
+.App-Button button:hover{
+  transition: all 0.3s;
+  border:2px solid #ECB47D;
+  color:#ECB47D;
+  background-color: #470F14;
+  transform: scale(1.04);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px black;
+}

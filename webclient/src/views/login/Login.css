@@ -14,6 +14,7 @@
   font-weight: bolder;
   font-family: 'Homemade Apple', cursive;
   opacity: 0;
+  margin:10px;
   animation: opening 1s cubic-bezier(0.12, 0, 0.39, 0) 0.6s forwards;
 }
 
@@ -23,13 +24,34 @@
 }
 
 .login-join{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0;
   animation: opening 1s cubic-bezier(0.12, 0, 0.39, 0) 0.7s forwards;
 }
 
 .login-divider{
   opacity: 0;
+  font-size: 20px;
+  text-decoration: underline;
   animation: opening 1s cubic-bezier(0.12, 0, 0.39, 0) 0.4s forwards;
+  margin: 10px;
+}
+
+.login-logo{
+  animation: float 5s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+}
+
+.login-map{
+  opacity: 0.5;
+  z-index: -1;
+  height: 900px;
+  width: 900px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  animation: hoverrotate 300s infinite alternate;
 }
 
 @keyframes opening{
@@ -38,5 +60,28 @@
   }
   100%{
     opacity: 1;
+  }
+}
+
+@keyframes hoverrotate{
+  0%{
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0px 0px 5px black;
+  }
+  100%{
+    transform: scale(1.04) rotate(360deg);
+    box-shadow: 0px 0px 20px black;
+  }
+}
+
+
+@keyframes float{
+  0%{
+    transform: translate(0px, 0px);
+    filter: drop-shadow(2px 4px 6px black);
+  }
+  100%{
+    transform: translate(0px, -20px);
+    filter: drop-shadow(2px 4px 10px rgb(22, 100, 39));
   }
 }

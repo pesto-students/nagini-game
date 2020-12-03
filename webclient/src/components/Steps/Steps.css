@@ -1,0 +1,47 @@
+.App-Steps{
+  position: absolute;
+}
+
+.steps-name{
+  filter: brightness(1.7);
+  transition: all 1s ease-out;
+}
+
+.steps-name-base{
+  width: 160px;
+}
+
+.steps-name-text{
+  position: relative;
+  left: 30px;
+  top: -80px;
+  width: 90px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps-feet img{
+  width:20px;
+}
+
+.steps-feet .steps-foot{
+  position: absolute;
+  animation: footfade 3s forwards;
+}
+
+.steps-feet .steps-left{
+  left: -15px;
+}
+
+.steps-feet .steps-right {
+  left: 15px;
+}
+
+
+@keyframes footfade{
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+

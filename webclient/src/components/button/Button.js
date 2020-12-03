@@ -1,10 +1,15 @@
 import React from 'react';
 import './Button.css'
 
-const Button = () => {
+const Button = (props) => {
+
+  function onClick(){
+    props.onClick && props.onClick();
+  }
+
   return (
     <div className="App-Button">
-      <button>Create Game</button>
+      <button onClick={onClick}>{props.children}</button>
     </div>
   );
 };

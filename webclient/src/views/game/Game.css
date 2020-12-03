@@ -1,0 +1,63 @@
+.App-Game{
+  display:grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-areas: 'panel game';
+  height: 100%;
+  font-size: 20px;
+}
+
+.game-panel{
+  grid-area: panel;
+  border-right: 5px solid #470F14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-grid{
+  grid-area: game;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.game-grid div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px dashed #835c5f;
+  border-bottom: 1px dashed #835c5f;
+}
+
+.game-logo{
+  margin:20px;
+}
+
+.game-score, .game-level{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:50px;
+  font-size:30px;
+}
+
+.game-score span, .game-level span{
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+.game-link{
+  margin: 20px 0px;
+}
+
+.game-topscores{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topscores-heading{
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 20px;;
+}
