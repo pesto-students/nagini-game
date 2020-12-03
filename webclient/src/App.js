@@ -1,24 +1,45 @@
-import logo from "./logo.svg";
-import "./App.css";
+import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Game from './views/Game/Game';
+import Login from './views/Login/Login';
+import Score from './views/Score/Score';
+import { useContext } from 'react';
+import { ResizeContext } from './contexts/resizeContext';
+import Init from './views/Init/Init';
+import Exit from './views/Exit/Exit';
+
 
 function App() {
+
+
+  const {isWideScreen} = useContext(ResizeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className={`App ${isWideScreen ? 'wide-screen' : ''}`}>
+        <Switch>
+          <Route path="/game">
+            <Game />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/score">
+            <Score />
+          </Route>
+          <Route path="/exit">
+            <Exit />
+          </Route>
+          <Route path="/">
+            <Init />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
